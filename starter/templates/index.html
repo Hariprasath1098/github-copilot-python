@@ -7,12 +7,30 @@
 </head>
 <body>
   <h1>Sudoku Game</h1>
+  <div class="controls">
+    <label for="difficulty">Difficulty:</label>
+    <select id="difficulty" aria-label="Select difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium" selected>Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <label for="dark-mode">
+      <input id="dark-mode" type="checkbox">
+      Dark Mode
+    </label>
+  </div>
   <div id="sudoku-board"></div>
   <div class="controls">
     <button id="new-game">New Game</button>
     <button id="check-solution">Check Solution</button>
+    <button id="hint">Hint</button>
+    <span id="timer" aria-live="polite">Time: 00:00</span>
     <span id="message"></span>
   </div>
+  <section id="scoreboard" aria-labelledby="scores-heading">
+    <h2 id="scores-heading">Top 10 Scores</h2>
+    <ol id="top-scores"></ol>
+  </section>
   <script src="/static/main.js"></script>
 </body>
 </html>
